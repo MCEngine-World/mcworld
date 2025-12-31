@@ -10,11 +10,12 @@ version = project.findProperty("${project.name}.version")
 
 ext {
     /*
-     * === User Credentials ===
-     * Values pulled from environment variables to avoid hard-coding
-     * sensitive information inside the repository.
+     * === GitHub Credentials ===
+     * Configuration for GitHub integration (User and Agent).
+     * Values pulled from environment variables.
      */
 
+    // -- User Identity --
     // GitHub account ID for identification in workflows or publishing.
     userGithubId = System.getenv('USER_GITHUB_ID')
     // GitHub display name used for metadata and publishing info.
@@ -22,19 +23,7 @@ ext {
     // GitHub personal access token for reading/publishing packages.
     userGithubToken = System.getenv('USER_GITHUB_TOKEN')
 
-    // GitLab account ID for GitLab-based repositories or registries.
-    userGitlabId = System.getenv('USER_GITLAB_ID')
-    // GitLab display name used in build/publish metadata.
-    userGitlabName = System.getenv('USER_GITLAB_NAME')
-    // GitLab personal access token for package publishing.
-    userGitlabToken = System.getenv('USER_GITLAB_TOKEN')
-
-    /*
-     * === Agent Credentials ===
-     * Represents an automated bot account (e.g., CI/CD agent).
-     * Useful for automated publishing, version tagging, or registry access.
-     */
-
+    // -- Agent Identity --
     // GitHub agent account ID for automation.
     agentGithubId = System.getenv('AGENT_GITHUB_ID')
     // GitHub agent display name for build metadata.
@@ -42,6 +31,21 @@ ext {
     // GitHub token for the automation agent.
     agentGithubToken = System.getenv('AGENT_GITHUB_TOKEN')
 
+    /*
+     * === GitLab Credentials ===
+     * Configuration for GitLab integration (User and Agent).
+     * Values pulled from environment variables.
+     */
+
+    // -- User Identity --
+    // GitLab account ID for GitLab-based repositories or registries.
+    userGitlabId = System.getenv('USER_GITLAB_ID')
+    // GitLab display name used in build/publish metadata.
+    userGitlabName = System.getenv('USER_GITLAB_NAME')
+    // GitLab personal access token for package publishing.
+    userGitlabToken = System.getenv('USER_GITLAB_TOKEN')
+
+    // -- Agent Identity --
     // GitLab agent account ID for automation.
     agentGitlabId = System.getenv('AGENT_GITLAB_ID')
     // GitLab agent display name for build metadata.
