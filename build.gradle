@@ -16,18 +16,18 @@ ext {
      */
 
     // GitHub account ID for identification in workflows or publishing.
-    user_github_id = System.getenv('USER_GITHUB_ID')
+    userGithubId = System.getenv('USER_GITHUB_ID')
     // GitHub display name used for metadata and publishing info.
-    user_github_name = System.getenv('USER_GITHUB_NAME')
+    userGithubName = System.getenv('USER_GITHUB_NAME')
     // GitHub personal access token for reading/publishing packages.
-    user_github_token = System.getenv('USER_GITHUB_TOKEN')
+    userGithubToken = System.getenv('USER_GITHUB_TOKEN')
 
     // GitLab account ID for GitLab-based repositories or registries.
-    user_gitlab_id = System.getenv('USER_GITLAB_ID')
+    userGitlabId = System.getenv('USER_GITLAB_ID')
     // GitLab display name used in build/publish metadata.
-    user_gitlab_name = System.getenv('USER_GITLAB_NAME')
+    userGitlabName = System.getenv('USER_GITLAB_NAME')
     // GitLab personal access token for package publishing.
-    user_gitlab_token = System.getenv('USER_GITLAB_TOKEN')
+    userGitlabToken = System.getenv('USER_GITLAB_TOKEN')
 
     /*
      * === Agent Credentials ===
@@ -36,18 +36,18 @@ ext {
      */
 
     // GitHub agent account ID for automation.
-    agent_github_id = System.getenv('AGENT_GITHUB_ID')
+    agentGithubId = System.getenv('AGENT_GITHUB_ID')
     // GitHub agent display name for build metadata.
-    agent_github_name = System.getenv('AGENT_GITHUB_NAME')
+    agentGithubName = System.getenv('AGENT_GITHUB_NAME')
     // GitHub token for the automation agent.
-    agent_github_token = System.getenv('AGENT_GITHUB_TOKEN')
+    agentGithubToken = System.getenv('AGENT_GITHUB_TOKEN')
 
     // GitLab agent account ID for automation.
-    agent_gitlab_id = System.getenv('AGENT_GITLAB_ID')
+    agentGitlabId = System.getenv('AGENT_GITLAB_ID')
     // GitLab agent display name for build metadata.
-    agent_gitlab_name = System.getenv('AGENT_GITLAB_NAME')
+    agentGitlabName = System.getenv('AGENT_GITLAB_NAME')
     // GitLab automation token for pipelines or publishing.
-    agent_gitlab_token = System.getenv('AGENT_GITLAB_TOKEN')
+    agentGitlabToken = System.getenv('AGENT_GITLAB_TOKEN')
 
     /*
      * === Organization Metadata ===
@@ -56,11 +56,11 @@ ext {
      */
 
     // Optional organization identifier for registries or grouping.
-    organization_id = System.getenv('ORGANIZATION_ID')
+    organizationId = System.getenv('ORGANIZATION_ID')
     // Name of the organization; defaults to "MCEngine-API".
-    organization_name = System.getenv('ORGANIZATION_NAME') ?: 'MCEngine-API'
+    organizationName = System.getenv('ORGANIZATION_NAME') ?: 'MCEngine-API'
     // Organization-scoped token for accessing private Packages.
-    organization_token = System.getenv('ORGANIZATION_TOKEN')
+    organizationToken = System.getenv('ORGANIZATION_TOKEN')
 
     /*
      * === Repository Metadata ===
@@ -69,11 +69,11 @@ ext {
      */
 
     // Optional repository ID for registry mapping.
-    repository_id = System.getenv('REPOSITORY_ID')
+    repositoryId = System.getenv('REPOSITORY_ID')
     // Name of this repository; defaults to "world".
-    repository_name = System.getenv('REPOSITORY_NAME') ?: 'world'
+    repositoryName = System.getenv('REPOSITORY_NAME') ?: 'world'
     // Repository-scoped token for Packages access.
-    repository_token = System.getenv('REPOSITORY_TOKEN')
+    repositoryToken = System.getenv('REPOSITORY_TOKEN')
 
     /*
      * === world Naming ===
