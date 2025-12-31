@@ -57,31 +57,31 @@ ext {
 
     // Optional organization identifier for registries or grouping.
     organizationId = System.getenv('ORGANIZATION_ID')
-    // Name of the organization; defaults to "MCEngine-API".
-    organizationName = System.getenv('ORGANIZATION_NAME') ?: 'MCEngine-API'
+    // Name of the organization; defaults to "MCEngine-World".
+    organizationName = System.getenv('ORGANIZATION_NAME') ?: 'MCEngine-World'
     // Organization-scoped token for accessing private Packages.
     organizationToken = System.getenv('ORGANIZATION_TOKEN')
 
     /*
      * === Repository Metadata ===
      * Repository-level identifiers used for publishing, naming, and
-     * constructing world coordinates.
+     * constructing World coordinates.
      */
 
     // Optional repository ID for registry mapping.
     repositoryId = System.getenv('REPOSITORY_ID')
-    // Name of this repository; defaults to "world".
-    repositoryName = System.getenv('REPOSITORY_NAME') ?: 'world'
+    // Name of this repository; defaults to "World".
+    repositoryName = System.getenv('REPOSITORY_NAME') ?: 'mcworld'
     // Repository-scoped token for Packages access.
     repositoryToken = System.getenv('REPOSITORY_TOKEN')
 
     /*
-     * === world Naming ===
+     * === World Naming ===
      * Determines the base name for generated JAR files.
      */
 
-    // Default world name when PROJECT_NAME is not provided.
-    jarName = System.getenv('PROJECT_NAME') ?: 'MCEngineWorld'
+    // Default MCWorld name when PROJECT_NAME is not provided.
+    jarName = System.getenv('PROJECT_NAME') ?: 'MCWorld'
 }
 
 allprojects {
